@@ -38,7 +38,7 @@ export default function Signup() {
                                 <input type='password' placeholder='Password' required onChange={(e) => (setpassword(e.target.value))} /><br />
                                 <button onClick={savedata}>Signup</button>
                                 <hr />
-                                <p> Already a User ? <Link to="/login">Login</Link></p>
+                                <p style={{marginTop:"20px"}}> Already a User ? <Link to="/login">Login</Link></p>
                                 
                             </div>
                         </form>
