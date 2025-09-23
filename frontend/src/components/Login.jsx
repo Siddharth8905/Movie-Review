@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 export default function Login() {
   return (
@@ -7,7 +9,8 @@ export default function Login() {
             <h1>Login</h1>
             <input type='text' placeholder='Name'/><br/>
             <input type='password' placeholder='Password'/><br/>
-            <button>Login</button>
+            <button>Login</button><br/>
+            <p>New User ?<Link to="/">Signup</Link></p>
         </form>
     </div>
   )
