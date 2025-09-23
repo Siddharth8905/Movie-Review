@@ -13,11 +13,13 @@ export default function Signup() {
     const navigate = useNavigate()
 
     const savedata = async (e) => {
+        e.preventDefault()
         try {
-            const data = { name, email, paasword }
-            const s = await axios.post("", data)
-            const r = s.save()
-            console.log(r.data);
+            console.log(email+password+name);
+            
+            const data = {name,email,password}
+            const s = await axios.post("http://localhost:5004/savedata", data)
+            console.log(s.data);
             navigate("/login")
 
         } catch (error) {
