@@ -1,0 +1,88 @@
+.mainbox {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #f5deb3, #deb887);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.subbox {
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.inp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+textarea {
+    resize: none;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0px 0px 5px rgba(255,152,0,0.5);
+}
+
+input[type="number"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #ff9800;
+    box-shadow: 0px 0px 5px rgba(255,152,0,0.5);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #ff9800;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e68900;
+}
