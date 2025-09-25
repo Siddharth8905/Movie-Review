@@ -3,6 +3,7 @@
   width: 100%;
   height: 10vh;
   background-color: rgb(2, 0, 0);
+  position: fixed;
 }
 .contains{
   display: flex;
@@ -10,8 +11,9 @@
   padding: 1%;
   margin-left: 20%;
   margin-right: 20%;
-  justify-content: space-around;
+  justify-content: center;
   align-items:center;
+  column-gap: 20px;
   font-size: 20px;
   color: white;
 }
@@ -42,31 +44,107 @@
   outline: none;
   border: none;
 }
-
-.sidebar {
-  color: white;
+.sidebarstyle{
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100vh;
+}
+.sidebar {
+  color: white;
+  width: 20%;
+  height: 100vh;
   background-color: black;
-  position: relative; 
-  top: 0;
-  left: 0;
+  position: relative;
 }
 
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 10px;
+  color: rgb(255, 255, 255);
+}
+
+
+#sidebarhead{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:10% 20%;
+  color: gold;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+#sidebarhead p{
+  font-size: 20px;
+  
+}
 .slideDown {
-  animation: slideDown 0.5s forwards;
+  animation: slideDown 0.5s backwards;
 }
 
 @keyframes slideDown {
-  0%   { top: -100vh; }
-  100% { top: 0; }
+  0%   { left: -20%; }
+  100% { left: 0%; }
 }
 
 .slideUp {
-  animation: slideUp 0.1s;
+  animation: slideUp 0.3s backwards;
 }
 
 @keyframes slideUp {
-  0%   { top: 0; }
-  100% { top: 150vh; }
+  0%   { left: 0%; }
+  100% { left: -20%; }
 }
+
+.blurbackground{
+  width: 80%;
+  height: 100vh;
+  background-color: tan;
+  position: relative;
+}
+
+.sliderightin{
+  animation:  sliderightin 0.5s forwards;
+}
+
+@keyframes sliderightin {
+  0% {right: -80%;}
+  100% {right:0%}
+}
+
+.sliderightout{
+  animation:  sliderightout 0.5s forwards;
+}
+
+@keyframes sliderightout {
+  0% {right: 0%;}
+  100% {right:-80%}
+}
+
+.blurbackground img{
+  width: 100%;
+  height: 100vh;
+
+}
+
+.dash{
+  background: url("dashback.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.dashtext{
+  width: 80%;
+  color: antiquewhite;
+  margin: 17%;
+  font-size:30px;
+  font-weight: 800;
+}
+h2{
+  color: yellow;
+}
+

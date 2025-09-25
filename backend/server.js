@@ -7,8 +7,8 @@ const router=require("./route/SignupRoute")
 
 const app=express()
 app.use(cors())
-app.use(router)
 app.use(parser.json())
+app.use(router)
 dotenv.config()
 mongoose.connect(process.env.mongo_url)
 .then(()=>{console.log("db connected");

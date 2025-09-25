@@ -10,6 +10,7 @@ export default function Signup() {
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
+    const [status, setstatus] = useState("")
     const navigate = useNavigate()
 
     const savedata = async (e) => {
@@ -32,22 +33,22 @@ export default function Signup() {
             <div className='box'>
                 <div className='lbox'>
                     <div className='signup'>
-                        <form>
+                        <form onSubmit={savedata}>
                             <div className='signalign'>
                                 <h1>SignUp</h1>
                                 <input type='text' placeholder='Name' required onChange={(e) => (setname(e.target.value))} /><br />
                                 <input type='email' placeholder='Email' required onChange={(e) => (setemail(e.target.value))} /><br />
                                 <input type='password' placeholder='Password' required onChange={(e) => (setpassword(e.target.value))} /><br />
-                                <button onClick={savedata}>Signup</button>
+                                <button type='submit'>Signup</button>
                                 <hr />
                                 <p style={{marginTop:"20px"}}> Already a User ? <Link to="/login">Login</Link></p>
-                                
+                                <p>{state}</p>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div className='rbox'>
-                    <img src='bg.webp'></img>
+                    <img src='image.png'></img>
                 </div>
             </div>
         </div>
