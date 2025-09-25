@@ -42,7 +42,7 @@ export default function Signup() {
                                 <button type='submit'>Signup</button>
                                 <hr />
                                 <p style={{marginTop:"20px"}}> Already a User ? <Link to="/login">Login</Link></p>
-                                <p>{state}</p>
+                                <p>{status}</p>
                             </div>
                         </form>
                     </div>
