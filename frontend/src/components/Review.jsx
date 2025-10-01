@@ -10,7 +10,7 @@ export default function Review() {
                     <label htmlFor=""> Write a review</label>
                     <textarea name="" id="" rows={5}></textarea>
                     <label htmlFor="">Rating out of 10</label>
-                    <input type="Numeber" step="any" />
+                    <input type="Number" step="any" />
                 </div>
             </form>
             </div>

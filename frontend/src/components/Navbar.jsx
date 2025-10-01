@@ -3,6 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import "../styles/Dashboard.css"
 export default function Navbar() {
   const navigate = useNavigate()
   const [sidebar, setSidebar] = useState("no")   
@@ -24,7 +25,7 @@ export default function Navbar() {
             <input type="text" placeholder='Search movies ...' />
             <SearchIcon color="action" />
           </div>
-          <p onClick={() => navigate("/signup")}>Signin</p>
+          <p onClick={() => navigate("/login")}>Signin</p>
           <p>watchlist</p>
         </div>
       </div>
