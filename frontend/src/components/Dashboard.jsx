@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { useNavigate } from 'react-router-dom'
+import "../styles/Dashboard.css"
 export default function Dashboard() {
   const navigate=useNavigate();
   return (

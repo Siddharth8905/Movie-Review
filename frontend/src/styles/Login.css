@@ -74,3 +74,9 @@
     height: 2px;               
     background-color: black;   
 }
+
+.admin{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

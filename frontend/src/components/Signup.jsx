@@ -15,13 +15,17 @@ export default function Signup() {
 
     const savedata = async (e) => {
         e.preventDefault()
-        try {
-            console.log(email+password+name);
-            
+        try {            
             const data = {name,email,password}
             const s = await axios.post("http://localhost:5004/savedata", data)
-            console.log(s.data);
-            navigate("/login")
+            if(s.data.msg==="exists"){
+                setstatus("Email already exists try Different")
+            }
+            else{
+                setstatus("Registered successfully")
+                console.log(s.data);
+                navigate("/login")
+            }
 
         } catch (error) {
             console.log({ msg: error.message });

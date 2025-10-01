@@ -1,14 +1,30 @@
 const user=require("../model/SignupSchema")
 const saveData=async(req,res)=>{
     try {
-        console.log("hi");
-        const s=new user(req.body)
-        const r=await s.save()
-        console.log(r.data);
+        const detail=req.body
+        const r = await user.findOne(detail)
+        if(r){
+           return res.json({msg:"exists"})
+        }
+        const s=await user.create(req.body)
         res.json({msg:"user data saved",s})
+
     } catch (error) {
         console.log(error);
     }
 }
 
-module.exports={saveData}
+const checkdata=async(req,res)=>{
+    try {
+        const r=await user.findOne(req.body)
+        
+        if(r){
+            return res.json("registered")
+        }
+        res.json("not registered")
+    } catch (error) {
+        
+    }
+}
+
+module.exports={saveData,checkdata}
