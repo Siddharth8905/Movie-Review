@@ -43,3 +43,25 @@
     width: 50%;
     height: 10%;    
 }
+
+.usertable{
+    border-collapse: collapse;
+    
+}
+.usertable td{
+    padding: 10px;
+}
+
+
+.userdetailsbox{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.colortxt{
+    text-decoration: underline;
+    color: blueviolet;
+    cursor: pointer;
+}

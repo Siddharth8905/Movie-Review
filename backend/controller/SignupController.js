@@ -27,4 +27,13 @@ const checkdata=async(req,res)=>{
     }
 }
 
-module.exports={saveData,checkdata}
+
+const getusers=async(req,res)=>{
+    try {
+        const r=await user.find();
+        res.json(r)
+    } catch (error) {
+        console.log(error);
+    }
+}
+module.exports={saveData,checkdata,getusers}
