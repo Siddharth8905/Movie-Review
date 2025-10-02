@@ -7,4 +7,6 @@ router.post("/savedata",SignupController.saveData)  //http://localhost:5004/save
 
 router.post("/checkdata",SignupController.checkdata)  //http://localhost:5004/checkdata
 
+router.get("/getusers",SignupController.getusers)   //http://localhost:5004/getusers
+
 module.exports=router
