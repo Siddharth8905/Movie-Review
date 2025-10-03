@@ -9,4 +9,8 @@ router.post("/checkdata",SignupController.checkdata)  //http://localhost:5004/ch
 
 router.get("/getusers",SignupController.getusers)   //http://localhost:5004/getusers
 
+router.put("/updateusers/:email",SignupController.updatedata)  //http://localhost:5004/updateusers
+ 
+router.delete("/deleteuser",SignupController.deletedata) //http://localhost:5004/deleteuser
+
 module.exports=router

@@ -36,4 +36,29 @@ const getusers=async(req,res)=>{
         console.log(error);
     }
 }
-module.exports={saveData,checkdata,getusers}
+
+const updatedata = async(req,res)=>{
+    try {
+        const {name}=req.body
+        const result=await user.findOneAndUpdate(
+            {email:req.params.email},
+            {name},
+            {new:true}
+        )
+        res.json(result)
+    } catch (error) {
+        console.log(error);  
+    }
+}
+
+const deletedata=async(req,res)=>{
+    try {
+        const email=req.query.email
+        const r=await user.findOneAndDelete({email:email})
+        res.json(r)
+    } catch (error) {
+        console.log(error);
+        
+    }
+}
+module.exports={saveData,checkdata,getusers,updatedata,deletedata}
