@@ -3,6 +3,7 @@
     height: 100vh;
     background-color: antiquewhite;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -12,6 +13,7 @@
     height: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -54,14 +56,43 @@
 
 
 .userdetailsbox{
+    width: 70%;
+    height: 50%;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-size: 20px;
 }
 
 .colortxt{
     text-decoration: underline;
     color: blueviolet;
     cursor: pointer;
+}
+
+.inputbox{
+    width: 70%;
+    border: 1px solid green;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inputboxin{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputboxin input{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 20px;
+    outline: none;
 }
