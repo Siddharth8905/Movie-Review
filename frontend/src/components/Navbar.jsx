@@ -42,13 +42,14 @@ export default function Navbar() {
             <p onClick={handleClose}>✖️</p>
           </div>
           <div className='list'>
-            <p>Home</p>
+            <p onClick={()=>navigate("/")}>Home</p>
             <p>Movies</p>
             <p>Shows</p>
             <p>Help</p>
           </div>
         </div>
           <div className={`blurbackground ${sidebar === "opening" ? "sliderightin" : "sliderightout"}`}
+           onClick={handleClose}
             onAnimationEnd={() => {
               if (sidebar === "closing") setSidebar("no")
             }}> <img src="sidebarimg.jpg" alt="" /></div></div>

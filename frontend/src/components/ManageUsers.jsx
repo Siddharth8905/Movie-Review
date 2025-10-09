@@ -40,12 +40,16 @@ export default function ManageUsers() {
         e.preventDefault()
         const res=await axios.put(`http://localhost:5004/updateusers/${upemail}`,{name:upname})
         console.log(res.data);
+        setupdata("off")
+        viewusers()
     }
 
-    const deleteuser=async()=>{
-        const res=await axios.delete("http://localhost:5004/deleteuser?email="+upemail)
+    const deleteuser=async(email)=>{
+        if(window.confirm(" whether the user "+ email +" can be deleted ")){
+        const res=await axios.delete("http://localhost:5004/deleteuser?email="+email)
         console.log(res)
         viewusers()
+        }
     }
     return (
         <>
@@ -69,7 +73,7 @@ export default function ManageUsers() {
                                         <td>{itr.name}</td>
                                         <td>{itr.email}</td>
                                         <td className='colortxt' onClick={() => updatedetails(itr.name, itr.email)}>edit</td>
-                                        <td className='colortxt' onClick={()=>{setupemail(itr.email),deleteuser()}}>delete</td>
+                                        <td className='colortxt' onClick={()=>{deleteuser(itr.email)}}>delete</td>
                                     </tr>
                                 </tbody>
                             ))}
